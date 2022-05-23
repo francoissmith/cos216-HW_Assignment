@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/registration.css" />
+
+
+    <script src="https://kit.fontawesome.com/51f7539f98.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="navbar">
+            <a href="#">
+                <img src="img/logo.svg" alt="logo" class="nav-logo">
+                <!-- <a href="#">Who News?</a> -->
+            </a>
+            <div class="nav-items">
+            </div>
+            <div id="video-container">
+                <div id="background-video">
+                    <video src="img/launch-bkg.mp4" playsinline="" preload="metadata" autoplay="" muted="" loop="">
+                    </video>
+                </div>
+            </div>
+            <div class="reg-container login">
+                <div id="title">
+                    <p>Login</p>
+                </div>
+                <form id="login-form" type="post">
+                    <label for="email">Email: </label><br>
+                    <div class="input-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" name="email" id="email">
+                        <i class="fa-solid fa-triangle-exclamation "></i><br>
+                    </div>
+                    <label for="password">Password: </label><br>
+                    <div class="input-container">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="password">
+                        <i class="fa-solid fa-triangle-exclamation "></i>
+                        <i id="eye-pass" class="fa-solid fa-eye eye"></i>
+                    </div>
+                    <br><br>
+
+                    <input type="hidden" id="socketID"  name="socketID">
+
+                    <button id="submit" type="submit">Submit</button><br>
+                    <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
+                </form>
+            </div>
+
+            <div class="footer">
+                <p>&copy;COS216 Student Francois Smith</p>
+            </div>
+
+            <script src="js/index.js"></script>
+
+</body>
+
+</html>
